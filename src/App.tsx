@@ -1,28 +1,11 @@
-import ListGroup from "./components/ListGroup";
-import Message from "./Message";
+import BootstrapButton from "./components/BootstrapButton";
 
 function App() {
-	const cities = [
-		"Dakar",
-		"Accra",
-		"Abuja",
-		"Lagos",
-		"Abidjan",
-		"Nairobi",
-		"Kimpala",
-	];
-
-	const handleSelectedItem = (selectedItem: string) => {
-		console.log(selectedItem);
-	};
+	
 	return (
 		<div>
-			<Message />
-			<ListGroup
-				items={cities}
-				heading="Cities in Africa"
-				onSelectedItem={handleSelectedItem}
-			/>
+			<BootstrapButton buttonClass="btn-primary" buttonText="This is my button" />
+			
 		</div>
 	);
 }
