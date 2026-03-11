@@ -1,12 +1,22 @@
-import { type ReactNode } from 'react'
+import { type ReactNode } from "react";
 
-interface AlertProp{
-    children: ReactNode;
+interface AlertProp {
+	children: ReactNode;
+	onClose: () => void;
 }
-const Alert = ({children}:AlertProp) => {
-  return (
-    <div>{children}</div>
-  )
-}
+const Alert = ({ children, onClose }: AlertProp) => {
+	return (
+		<div className="alert" role="alert">
+			{children}
+			<button
+				type="button"
+				className="btn-close"
+				data-bs-dismiss="alert"
+				aria-label="Close"
+				onClick={onClose}
+			></button>
+		</div>
+	);
+};
 
-export default Alert
+export default Alert;
